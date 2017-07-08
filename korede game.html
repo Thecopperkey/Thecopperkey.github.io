@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<style>
+canvas{
+    border: 1px solid #d3d3d3;
+    background-color: #f1f1f1;
+}
+</style>
+</head>
+<body onload="startGame()">
+<script>
+function startGame(){
+    myGameArea.start();
+}
+var myGameArea={
+    canvas:document.createElement("canvas");
+start:function(){
+this.canvas.width=450;
+this.canvas.height=260;
+this.context=this.canvas.getContext("2d");
+document.body.insertBefore(this.canvas,document.body.childNodes[0]);
+  }
+}
+function componet(width,height,color,x,y){
+    this.width=width;
+    this.height=height;
+    this.x=x;
+    this.y=y;
+    ctx=myGameArea.context;
+    ctx.fillstyle=color;
+    ctx,fillRect(this.x,this.y,this.width,this.height);
+}
+</script>
+<p>I have made a game component,a red square!</p>
+
+</body>
+</html>
+
